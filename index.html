@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Coding Quiz Challenge</title>
+</head>
+<body>
+
+<div class="highScore">View high scores</div>
+
+<div id="timeLeft">Time left</div>
+
+<div class="container">
+    <div id="question-container" class="hide">
+<h1>Coding Quiz Challenge</h1>
+<p><i>Try to answer all of these coding questions correctly. 
+    <br> If you answer incorrectly, points will be taken off of the timer. 
+    <br> Please answer the questions in the alloted time. <br> Your score will be recorded on a leader board at the end of the quiz.</i></p>
+    
+<div id="js-question">
+<h2 id="js-question-text"></h2>
+<ul id="js-question-choices" class="choices">
+</ul>
+<button class="start-button" id="js-start-quiz">Start the quiz</button>
+<button class="next-button" id="js-next-button">Next Question</button>
+</div>
+</div>
+</div>
+
+    <form id="greatJob">
+<h3>Great Job!</h3>
+<p>Please enter your initials for high score</p>
+<label class="initials">Initials</label>
+<input type="text" id="textInitials">
+<button>Submit</button>
+    </form>
+
+    <div>
+<h3>GAME OVER</h3>
+<p>Replay?</p>
+<button id ="replay">Try Again</button>
+    </div>
+
+</body>
+</html>
+
+<script src="assets/script.js"></script>
