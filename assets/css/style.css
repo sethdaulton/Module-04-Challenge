@@ -1,113 +1,164 @@
-::before, ::after {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
-    --hue-neutral: 200;
-    --hue-wrong: 0;
-    --hue-correct: 145;
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 160;
 }
 
 h1 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(255, 25, 0);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: rgb(31, 85, 233);
 }
 
 h2 {
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(255, 25, 0);
-    padding-top: 10px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  color: rgb(31, 85, 233);
+  padding-top: 10px;
 }
 
 p {
-    text-align: center;
-    margin-top: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(139, 139, 139);
-    line-height: 1.5em;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(139, 139, 139);
+  line-height: 1.5em;
 }
 
 body {
-    --hue: var(--hue-neutral);
-    margin-top: 50px;
-    background-color: hsl(var(--hue), 100%, 20%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
-
-body.correct {
-    --hue: var(--hue-correct);
-}
-
-body.wrong {
-    --hue: var(--hue-wrong);
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250, 140, 228);
 }
 
 .container {
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
 }
 
 .btn-grid {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0px;
 }
 
-button {
-    background-color: rgb(54, 54, 54);
-    color: white;
-    border: 2px solid;
-    border-color: rgb(255, 25, 0);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    align-items: center;
+.btn {
+  --hue: var(--hue-neutral);
+  border: 2px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
 }
 
-button:hover {
-    background-color: rgb(255, 25, 0);
-    color: white;
-    text-decoration: underline;
-    border-color: black;
+.btn:hover {
+  border-color: black;
+  background-color: rgb(255, 251, 0);
+  color: black;
 }
 
-button.correct {
-    --hue: var(--hue-correct);
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
 }
 
-button.wrong {
-    --hue: var(--hue-wrong);
+.btn.wrong {
+  --hue: var(--hue-wrong);
 }
 
-.start-button, .next-button {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
+.start-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
 }
 
 .choices {
-    list-style: none;
-    position: relative;
-    left: -12px;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.hide {
-    /* display: none; */
+  list-style: none;
+  position: relative;
+  left: -12px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
 }
 
 ul li {
-    padding-top: 5px;
-  }
+  padding-top: 5px;
+}
+
+.timer-container {
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+  margin-left: -80%;
+  width: 20%;
+  background-color: white;
+  color: rgb(31, 85, 233);
+  font-weight: bold;
+  padding: 1%;
+  align-items: center;
+}
+
+.high-score-container {
+  position: absolute;
+  color: rgb(31, 85, 233);
+  font-weight: bold;
+  top: 0;
+  margin-top: 80px;
+  margin-left: -80%;
+  width: 20%;
+  background-color: white;
+  padding: 1%;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* #countdown {
+  background-color: yellow;
+  border-style: dotted;
+  border-color: rgb(31, 85, 233);
+} */
+
+#count {
+  position: absolute;
+  padding: 10px;
+  background-color: rgb(255, 255, 0);
+  border-style: dotted;
+  border-color: rgb(31, 85, 233);
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.time-align {
+    position: fixed;
+}
