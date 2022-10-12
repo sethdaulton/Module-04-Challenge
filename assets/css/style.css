@@ -28,7 +28,7 @@ p {
   text-align: center;
   margin-top: 50px;
   font-family: "Roboto", sans-serif;
-  color: rgb(139, 139, 139);
+  color: rgb(31, 85, 233);
   line-height: 1.5em;
 }
 
@@ -41,7 +41,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(250, 140, 228);
+  background-color: rgb(147, 147, 147);
 }
 
 .container {
@@ -66,6 +66,7 @@ body {
   background-color: hsl(var(--hue), 100%, 50%);
   border-radius: 5px;
   padding: 5px 10px;
+  font-size: 18px;
   color: white;
   outline: none;
 }
@@ -142,12 +143,6 @@ ul li {
   display: none;
 }
 
-/* #countdown {
-  background-color: yellow;
-  border-style: dotted;
-  border-color: rgb(31, 85, 233);
-} */
-
 #count {
   position: absolute;
   padding: 10px;
@@ -157,8 +152,4 @@ ul li {
   margin-left: 10px;
   font-size: 20px;
   color: black;
-}
-
-.time-align {
-    position: fixed;
 }
